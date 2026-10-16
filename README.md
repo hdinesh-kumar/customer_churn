@@ -2,6 +2,10 @@
 
 ## Project Overview
 
+> **Note:** Keep the `images` folder in the same repository as this `README.md`.  
+> The relative Markdown image paths used in this file will then render automatically on GitHub.
+
+
 This project is a **Customer Churn Prediction and Analysis System** built using **Supervised Machine Learning**.
 
 The goal of the project is to analyze telecom customer behaviour and predict whether a customer is likely to **churn** or **stay** with the company.
@@ -109,6 +113,11 @@ After cleaning, the dataset contained no missing values.
 
 ### 1. Customer Churn Distribution
 
+![Customer Churn Distribution](images/customer_churn_distribution.png)
+
+![Class Distribution - Churn vs No Churn](images/class_distribution_churn_vs_no_churn.png)
+
+
 The dataset contains:
 
 | Churn Status | Customers | Percentage |
@@ -132,6 +141,9 @@ Because of this class imbalance, the model should **not be judged using accuracy
 
 ## Contract Type vs Churn
 
+![Contract Type vs Churn](images/contract_type_vs_churn.png)
+
+
 The churn percentage differs strongly by contract type.
 
 | Contract Type | No Churn | Churn |
@@ -152,6 +164,9 @@ This indicates that long-term contracts are strongly associated with customer re
 
 ## Internet Service vs Churn
 
+![Internet Service vs Churn](images/internet_service_vs_churn.png)
+
+
 | Internet Service | No Churn | Churn |
 |---|---:|---:|
 | DSL | 81.04% | 18.96% |
@@ -167,6 +182,9 @@ Customers with no internet service show the lowest churn percentage.
 ---
 
 ## Payment Method vs Churn
+
+![Payment Method vs Churn](images/payment_method_vs_churn.png)
+
 
 | Payment Method | No Churn | Churn |
 |---|---:|---:|
@@ -185,6 +203,9 @@ Automatic payment methods are associated with lower churn.
 
 ## Tenure Analysis
 
+![Customer Tenure Distribution by Churn](images/tenure_distribution_by_churn.png)
+
+
 The tenure distribution shows that churn is more common among customers with **shorter tenure**.
 
 Customers who have stayed for longer periods are generally less likely to churn.
@@ -195,6 +216,11 @@ This is also supported later by the Logistic Regression coefficient for `tenure`
 
 ## Monthly Charges vs Churn
 
+![Monthly Charges vs Churn](images/monthly_charges_vs_churn_1.png)
+
+![Monthly Charges vs Churn - Additional Output](images/monthly_charges_vs_churn_2.png)
+
+
 The box plot shows that customers who churn generally have **higher monthly charges** than customers who stay.
 
 This suggests that pricing and monthly cost may influence churn behaviour.
@@ -203,6 +229,9 @@ This suggests that pricing and monthly cost may influence churn behaviour.
 
 ## Total Charges vs Churn
 
+![Total Charges vs Churn](images/total_charges_vs_churn.png)
+
+
 Customers who churn generally have lower total charges because many of them have shorter tenure.
 
 Customers who stay longer accumulate higher total charges over time.
@@ -210,6 +239,9 @@ Customers who stay longer accumulate higher total charges over time.
 ---
 
 ## Correlation Between Numerical Features
+
+![Correlation Between Numerical Features](images/correlation_heatmap.png)
+
 
 The strongest numerical correlation observed was:
 
@@ -323,6 +355,9 @@ This ensures that the same preprocessing steps are automatically applied during 
 
 ## Overall Evaluation Metrics
 
+![Model Evaluation Metrics](images/model_evaluation_metrics.png)
+
+
 | Evaluation Metric | Result |
 |---|---:|
 | Accuracy | **80.55%** |
@@ -408,6 +443,9 @@ The model performs strongly when identifying customers who stay.
 
 # Confusion Matrix
 
+![Confusion Matrix](images/confusion_matrix.png)
+
+
 The confusion matrix produced:
 
 |  | Predicted No Churn | Predicted Churn |
@@ -452,6 +490,9 @@ This is partly related to the class imbalance in the original dataset.
 
 # ROC Curve
 
+![ROC Curve](images/roc_curve.png)
+
+
 The model achieved:
 
 ```text
@@ -467,6 +508,9 @@ Therefore, Logistic Regression performs substantially better than random classif
 ---
 
 # Precision-Recall Curve
+
+![Precision-Recall Curve](images/precision_recall_curve.png)
+
 
 The Average Precision score was:
 
@@ -486,6 +530,9 @@ when the classification threshold changes.
 ---
 
 # 5-Fold Cross-Validation
+
+![5-Fold Cross Validation Accuracy](images/five_fold_cross_validation.png)
+
 
 The model was also evaluated using 5-fold stratified cross-validation.
 
@@ -520,6 +567,9 @@ The cross-validation accuracy of 80.52% is also very close to the test accuracy 
 ---
 
 # Churn Risk Factors
+
+![Important Features Affecting Customer Churn](images/important_features_affecting_churn.png)
+
 
 Because Logistic Regression is interpretable, its coefficients can be used to understand which features are associated with increased or reduced churn tendency.
 
@@ -642,6 +692,9 @@ These thresholds can later be adjusted based on business requirements, retention
 
 # Risk-Level Distribution
 
+![Predicted Customer Churn Risk Levels](images/predicted_churn_risk_levels.png)
+
+
 The test customers were divided into:
 
 | Risk Level | Customers |
@@ -657,6 +710,11 @@ The High-risk group can be prioritized for retention actions.
 ---
 
 # Actual vs Predicted Classes
+
+![Actual vs Predicted Customer Classes](images/actual_vs_predicted_1.png)
+
+![Actual vs Predicted Customer Classes - Additional Output](images/actual_vs_predicted_2.png)
+
 
 For the test dataset:
 
